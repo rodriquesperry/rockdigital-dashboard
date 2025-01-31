@@ -1,0 +1,20 @@
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 280px;
+  background-color: #fff;
+  border-right: 1px solid lightblue;
+  overflow-y: scroll;
+  font-family: var(--font-lato);
+}
+
+.sidebar label {
+  font-size: .85rem;
+  font-weight: 700;
+}
+
+.sidebar li {
+  font-size: 1rem;
+}
