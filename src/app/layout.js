@@ -1,5 +1,7 @@
-import { Lato, Playfair_Display, Plus_Jakarta_Sans } from 'next/font/google';
 import Sidebar from '@/components/sidebar/Sidebar.component';
+import Navigation from '@/components/navigation/Navigation.component';
+
+import { Lato, Playfair_Display, Plus_Jakarta_Sans } from 'next/font/google';
 
 import './globals.css';
 
@@ -28,8 +30,16 @@ export const metadata = {
 export default function RootLayout({ children }) {
 	return (
 		<html lang='en'>
-			<body className={`${latoFont.variable} ${pfDisplay.variable} ${jakartaFont}`}>
-				<Sidebar>{children}</Sidebar>
+			<body
+				className={`${latoFont.variable} ${pfDisplay.variable} ${jakartaFont}`}
+			>
+				<div className='layout'>
+					<Sidebar />
+					<div className='main-container'>
+						<Navigation />
+						<main>{children}</main>
+					</div>
+				</div>
 			</body>
 		</html>
 	);

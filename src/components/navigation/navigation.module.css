@@ -1,0 +1,16 @@
+.main_nav {
+	border: 1px solid red;
+	height: 7.5vh;
+	display: flex;
+	align-items: center;
+}
+
+.theme_icon {
+  margin-left: 2rem;
+}
+
+.nav_links {
+	display: flex;
+  margin-left: auto;
+  margin-right: 2rem;
+}
