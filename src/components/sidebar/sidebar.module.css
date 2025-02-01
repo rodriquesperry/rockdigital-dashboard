@@ -10,10 +10,6 @@
 	font-family: var(--font-plus-jakarta-sans);
 }
 
-.logo {
-  border: 1px solid red;
-}
-
 .sidebar ul {
 	list-style: none;
 	margin-left: 0.6rem;
