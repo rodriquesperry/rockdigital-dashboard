@@ -2,17 +2,20 @@
 
 import React from 'react';
 import { useTheme } from '@/components/theme/ThemeProvider.component';
-import { MdOutlineLightMode } from 'react-icons/md';
-import { CiLight } from "react-icons/ci";
+import { MdOutlineLightMode } from "react-icons/md";
+import { MdOutlineDarkMode } from "react-icons/md";
+
 
 import styles from './navigation.module.css';
 
 const Navigation = () => {
-	const { switchThemes } = useTheme();
+	const { themeType, switchThemes } = useTheme();
 	return (
 		<nav className={styles.main_nav}>
 			<div className={styles.theme_icon}>
-				<a onClick={switchThemes} type="button"><CiLight size={30} /></a> 
+				<a onClick={switchThemes} type="button">
+        {themeType === 'dark' ? <MdOutlineDarkMode className={styles.darkIcon} size={28} /> :<MdOutlineLightMode className={styles.lightIcon} size={28} />}
+        </a> 
 			</div>
 			<div className={styles.nav_links}>
 				<a href='/' className={styles.nav_link}>
