@@ -1,4 +1,4 @@
-'use client';
+'use client'
 
 import React, { useState } from 'react';
 import styles from './sidebar.module.css';
@@ -12,13 +12,13 @@ const Sidebar = () => {
 				<li className={styles.menu_item}>Dashboard</li>
 				<li className={styles.menu_label}>CMS</li>
 				<li className={styles.menu_item}>Posts</li>
-				<li className={styles.menu_item}>Contact</li>
+				<li className={styles.menu_item}>Contacts</li>
         <li className={styles.menu_label}>CMS</li>
 				<li className={styles.menu_item}>Posts</li>
-				<li className={styles.menu_item}>Contact</li>
+				<li className={styles.menu_item}>Contacts</li>
         <li className={styles.menu_label}>CMS</li>
 				<li className={styles.menu_item}>Posts</li>
-				<li className={styles.menu_item}>Contact</li>
+				<li className={styles.menu_item}>Contacts</li>
       
 			</ul>
 		</div>

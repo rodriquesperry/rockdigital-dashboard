@@ -1,6 +1,6 @@
 import Sidebar from '@/components/sidebar/Sidebar.component';
 import Navigation from '@/components/navigation/Navigation.component';
-
+import { ThemeProvider } from '@/components/theme/ThemeProvider.component';
 import { Lato, Playfair_Display, Plus_Jakarta_Sans } from 'next/font/google';
 
 import './globals.css';
@@ -33,13 +33,15 @@ export default function RootLayout({ children }) {
 			<body
 				className={`${latoFont.variable} ${pfDisplay.variable} ${jakartaFont}`}
 			>
-				<div className='layout'>
-					<Sidebar />
-					<div className='main-container'>
-						<Navigation />
-						<main>{children}</main>
+				<ThemeProvider>
+					<div className='layout'>
+						<Sidebar />
+						<div className='main-container'>
+							<Navigation />
+							<main>{children}</main>
+						</div>
 					</div>
-				</div>
+				</ThemeProvider>
 			</body>
 		</html>
 	);
