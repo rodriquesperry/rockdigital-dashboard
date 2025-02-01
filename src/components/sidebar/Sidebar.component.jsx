@@ -13,6 +13,13 @@ const Sidebar = () => {
 				<li className={styles.menu_label}>CMS</li>
 				<li className={styles.menu_item}>Posts</li>
 				<li className={styles.menu_item}>Contact</li>
+        <li className={styles.menu_label}>CMS</li>
+				<li className={styles.menu_item}>Posts</li>
+				<li className={styles.menu_item}>Contact</li>
+        <li className={styles.menu_label}>CMS</li>
+				<li className={styles.menu_item}>Posts</li>
+				<li className={styles.menu_item}>Contact</li>
+      
 			</ul>
 		</div>
 	);
