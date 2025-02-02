@@ -1,6 +1,8 @@
-'use client'
+'use client';
 
 import React, { useState } from 'react';
+import Link from 'next/link';
+
 import styles from './sidebar.module.css';
 
 const Sidebar = () => {
@@ -9,17 +11,20 @@ const Sidebar = () => {
 			<h1 className={styles.logo}>Rock Digital</h1>
 			<ul>
 				<li className={styles.menu_label}>HOME</li>
-				<li className={styles.menu_item}>Dashboard</li>
+				<Link href={'/'}>
+					<li className={styles.menu_item}>Dashboard</li>
+				</Link>
+				<li className={styles.menu_label}>CMS</li>
+				<Link href={'/posts'}>
+					<li className={styles.menu_item}>Posts</li>
+				</Link>
+				<li className={styles.menu_item}>Contacts</li>
 				<li className={styles.menu_label}>CMS</li>
 				<li className={styles.menu_item}>Posts</li>
 				<li className={styles.menu_item}>Contacts</li>
-        <li className={styles.menu_label}>CMS</li>
+				<li className={styles.menu_label}>CMS</li>
 				<li className={styles.menu_item}>Posts</li>
 				<li className={styles.menu_item}>Contacts</li>
-        <li className={styles.menu_label}>CMS</li>
-				<li className={styles.menu_item}>Posts</li>
-				<li className={styles.menu_item}>Contacts</li>
-      
 			</ul>
 		</div>
 	);
