@@ -1,51 +1,43 @@
 'use client';
-
-import { useEffect, useState } from 'react';
+import { auth } from '@strapi/helper-plugin';
+import useUserUuid from '../Utilities/useUserUuid';
+import usePosts from '../Utilities/usePosts';
 import Post from '@/components/post/post.component';
-import axios from 'axios';
 
 const Posts = () => {
-  const [userUuid, setUserUuid] = useState(null);
-  const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzM4NDQ2MjI1LCJleHAiOjE3NDEwMzgyMjV9.tKlE4JBo7K_0knJR2DnIiul0ijPWiUzavKqRIT43NtE';
+	const token =
+		'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzM4NDQ2MjI1LCJleHAiOjE3NDEwMzgyMjV9.tKlE4JBo7K_0knJR2DnIiul0ijPWiUzavKqRIT43NtE';
+
+	const { userUuid, loading: userLoading } = useUserUuid(token);
+  
+  console.log('auth.getToken: ', auth.getToken);
   
 
-  useEffect(() => {
-    console.log('token: ', token);
-    
-    const getUserUuid = async () => {
-      const { data } = await axios.get('http://127.0.0.1:1337/api/user', {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      });
+  console.log('Token: ', token);
+  console.log('userUuid: ', userUuid);
+  console.log('userLoading: ', userLoading);
 
-      if (data && data.user_uuid) {
-        setUserUuid(data.user_uuid);
-        console.log('userUuid: ', userUuid);
-        
-      } else {
-        console.log('Error fetching user UUID.');
-        
-      }
-    }
-  }, []);
+  
+	if (userLoading) {
+    return <div>Loading user UUID...</div>;
+	}
+  
+  if (!userUuid) {
+    return <div>User UUID is not available. Please try again later.</div>
+  }
 
-	useEffect(() => {
-		const getPosts = async () => {
-			const { data } = await axios.get(`http://127.0.0.1:1337/api/posts?filters[author_uuid][$eq]=${userUuid}`, {
-				headers: {
-					Authorization: `Bearer ${token}`,
-				},
-			});
-			if (!data) {
-				console.log('Error fetching Data.');
-			}
-			console.log('posts: ', data.data);
-		};
-		getPosts();
-	}, []);
+  const { Posts, loading, error } = usePosts(userUuid, token);
 
-	return (
+  if (loading) {
+    return <div>Loading posts...</div>;
+	}
+	
+	if (error) {
+    return <div>Error Loading posts: {error.message}</div>;
+	}
+
+
+  return (
 		<div>
 			This is where the Posts go!!
 			<Post />

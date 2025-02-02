@@ -11,6 +11,7 @@
   "dependencies": {
     "@babel/runtime": "^7.26.7",
     "@geist-ui/core": "^2.3.8",
+    "@strapi/helper-plugin": "^4.25.12",
     "axios": "^1.7.9",
     "next": "15.1.6",
     "react": "^19.0.0",
