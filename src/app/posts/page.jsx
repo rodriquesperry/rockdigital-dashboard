@@ -1,5 +1,4 @@
 'use client';
-import { auth } from '@strapi/helper-plugin';
 import useUserUuid from '../Utilities/useUserUuid';
 import usePosts from '../Utilities/usePosts';
 import Post from '@/components/post/post.component';
@@ -9,14 +8,6 @@ const Posts = () => {
 		'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzM4NDQ2MjI1LCJleHAiOjE3NDEwMzgyMjV9.tKlE4JBo7K_0knJR2DnIiul0ijPWiUzavKqRIT43NtE';
 
 	const { userUuid, loading: userLoading } = useUserUuid(token);
-  
-  console.log('auth.getToken: ', auth.getToken);
-  
-
-  console.log('Token: ', token);
-  console.log('userUuid: ', userUuid);
-  console.log('userLoading: ', userLoading);
-
   
 	if (userLoading) {
     return <div>Loading user UUID...</div>;
