@@ -1,0 +1,9 @@
+.card {
+  display: flex;
+  height: 167px;
+  width: 375px;
+}
+
+.ybGauge {
+  padding-top: 2rem;
+}

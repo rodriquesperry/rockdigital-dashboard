@@ -49,7 +49,7 @@ a {
 
 .main-container {
   flex-grow: 1;
-  margin-left: 280px; /* Same as sidebar width */
+  margin-left: 250px; /* Same as sidebar width */
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -59,4 +59,10 @@ main {
   flex-grow: 1;
   padding: 20px;
   overflow: auto; /* Allows scrolling */
+}
+
+.card_title {
+  padding: 1rem 1rem 0;
+  width: 100%;
+  font-weight: 200;
 }

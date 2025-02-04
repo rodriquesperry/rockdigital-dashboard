@@ -3,7 +3,7 @@
 	left: 0;
 	top: 0;
 	height: 100vh;
-	width: 230px;
+	width: 200px;
 	padding: 0.6rem 1.5rem 1.5rem 1.5rem;
 	border-right: 1px solid lightblue;
 	overflow-y: scroll;
@@ -17,12 +17,16 @@
 .logo {
 	margin-right: 1.5rem;
 	font-size: 1.65rem;
+  width: 100%;
+  text-align: center;
 }
 
 .sidebar ul {
 	list-style: none;
-	margin-left: 0.6rem;
+	/* margin-left: 0.6rem; */
   height: 100vh;
+  width: 100%;
+  
 }
 
 .sidebar ul li::before {
@@ -32,7 +36,7 @@
 .sidebar .menu_label {
 	font-size: 0.875rem;
 	font-weight: 500;
-	margin-right: 2rem;
+	/* margin-right: 2rem; */
 	margin-top: 2rem;
 }
 
@@ -46,4 +50,10 @@
 	font-weight: 400;
 	line-height: 1.344rem;
 	color: rgb(150, 142, 142);
+  display: flex;
+}
+
+.menu_item_icon {
+  margin: auto .3rem 0 0;
+  display: flex;
 }

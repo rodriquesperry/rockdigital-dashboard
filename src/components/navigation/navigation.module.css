@@ -2,14 +2,55 @@
 	height: 12.5vh;
 	display: flex;
 	align-items: center;
+	justify-content: center;
 }
 
 .theme_icon {
-  margin-left: 2rem;
+	margin-left: 2rem;
 }
 
 .nav_links {
 	display: flex;
-  margin-left: auto;
-  margin-right: 2rem;
+	margin: 0 2rem 0 auto;
+	margin-right: 2rem;
+
+	align-items: center;
+}
+
+.login {
+	display: block;
+	width: 50px;
+	height: 13px;
+	background: #4e9caf;
+	padding: 10px;
+	text-align: center;
+	border-radius: 5px;
+	color: #fff;
+	font-weight: bold;
+	line-height: 13px;
+}
+
+.profile_pic {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 0.25rem;
+}
+
+.profile_pic img {
+	height: 40px;
+	width: 40px;
+	border-radius: 50%;
+	margin-left: 1rem;
+}
+
+.border_bottom {
+	background: rgb(18, 72, 103);
+	background: linear-gradient(
+		90deg,
+		rgba(18, 72, 103, 0.9682466736694678) 0%,
+		rgba(255, 255, 255, 1) 92%
+	);
+	height: 1px;
+	margin-left: 1rem;
 }

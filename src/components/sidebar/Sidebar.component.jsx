@@ -3,6 +3,8 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 
+import { LuLayoutDashboard } from "react-icons/lu";
+
 import styles from './sidebar.module.css';
 
 const Sidebar = () => {
@@ -12,7 +14,7 @@ const Sidebar = () => {
 			<ul>
 				<li className={styles.menu_label}>HOME</li>
 				<Link href={'/'}>
-					<li className={styles.menu_item}>Dashboard</li>
+					<li className={styles.menu_item}><div className={styles.menu_item_icon}><LuLayoutDashboard size={19} /></div>Dashboard</li>
 				</Link>
 				<li className={styles.menu_label}>CMS</li>
 				<Link href={'/posts'}>
