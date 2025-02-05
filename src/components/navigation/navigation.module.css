@@ -45,12 +45,12 @@
 }
 
 .border_bottom {
-	background: rgb(18, 72, 103);
+	background: rgba(18, 72, 103);
 	background: linear-gradient(
 		90deg,
-		rgba(18, 72, 103, 0.9682466736694678) 0%,
+		rgba(18, 72, 103, 0.968) 0%,
 		rgba(255, 255, 255, 1) 92%
 	);
 	height: 1px;
-	margin-left: 1rem;
+	margin: 0 2rem;
 }

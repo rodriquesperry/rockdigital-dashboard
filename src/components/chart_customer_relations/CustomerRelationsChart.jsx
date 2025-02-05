@@ -1,19 +1,42 @@
 import * as React from 'react';
-import { Gauge } from '@mui/x-charts/Gauge';
+import { BarChart } from '@mui/x-charts/BarChart';
 import Card from '@mui/material/Card';
+
+import styles from './customer_relations.module.css';
 
 export default function CustomerRelationsChart() {
 	return (
-		<Card className={styles.card}>
-			<h4>Yearly Breakup</h4>
-			<Gauge
-				value={75}
-				startAngle={0}
-				endAngle={360}
-				innerRadius='80%'
-				outerRadius='100%'
-				// ...
-			/>
-		</Card>
+		<>
+			<Card className={styles.card}>
+				<h4 className='card_title'>Leads and Customers Overview</h4>
+				<BarChart
+					xAxis={[
+						{
+							id: 'barCategories',
+							data: ['Leads', 'Customers'],
+							scaleType: 'band',
+							categoryGapRatio: 0.6,
+							barGapRatio: 0.2,
+						},
+					]}
+					series={[
+						{
+							label: 'Current',
+							data: [24, 23],
+						},
+						{
+							label: '30 days',
+							data: [11, 6],
+						},
+						{
+							label: '1 year',
+							data: [13, 8],
+						},
+					]}
+					width={700}
+					height={300}
+				/>
+			</Card>
+		</>
 	);
 }

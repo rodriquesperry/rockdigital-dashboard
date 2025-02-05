@@ -13,16 +13,23 @@ export default function SalesOverview() {
 					xAxis={[
 						{
 							id: 'barCategories',
-							data: ['Revenue', 'Customer Acquisition', 'Retention Rate'],
+							data: ['Leads', 'Customers'],
 							scaleType: 'band',
 						},
 					]}
 					series={[
 						{
-							data: [4, 3, 5],
+							label: 'Key A',
+							data: [4, 3],
 						},
-						{ data: [1, 6, 3] },
-						{ data: [2, 5, 6] },
+						{
+							label: 'Key B',
+							data: [1, 6],
+						},
+						{
+							label: 'Key C',
+							data: [2, 5],
+						},
 					]}
 					width={700}
 					height={300}
