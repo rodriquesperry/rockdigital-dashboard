@@ -21,7 +21,7 @@ export default function CustomerRelationsChart() {
 					]}
 					series={[
 						{
-							label: 'Current',
+							label: 'Today',
 							data: [24, 23],
 						},
 						{
@@ -33,8 +33,8 @@ export default function CustomerRelationsChart() {
 							data: [13, 8],
 						},
 					]}
-					width={700}
-					height={300}
+					width={735}
+					height={200}
 				/>
 			</Card>
 		</>

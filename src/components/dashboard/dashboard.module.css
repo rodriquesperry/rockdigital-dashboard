@@ -1,0 +1,20 @@
+.card {
+  height: 100vh;
+  padding: 1rem;
+  flex-wrap: wrap;
+}
+
+.top_kpi {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.dashboard_main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-bottom: 5rem;
+}

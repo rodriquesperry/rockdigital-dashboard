@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 import profile_pic from '@/assets/profile_pic.avif';
 import { useTheme } from '@/components/theme/ThemeProvider.component';
@@ -10,6 +10,7 @@ import { MdOutlineDarkMode } from 'react-icons/md';
 import styles from './navigation.module.css';
 
 const Navigation = () => {
+  const [isLoggedIn, setIsLoggedIn] = useState(true);
 	const { themeType, switchThemes } = useTheme();
 	return (
 		<>
@@ -25,8 +26,8 @@ const Navigation = () => {
 				</div>
 				<div className={styles.nav_links}>
 					<div>
-						<a href='/' className={`${styles.login}`}>
-							Login
+						<a href='/' className={`${styles.logout}`}>
+							Log out
 						</a>
 					</div>
 					<div className={styles.profile_pic}>

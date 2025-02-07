@@ -1,5 +1,5 @@
-import Sidebar from '@/components/sidebar/Sidebar.component';
-import Navigation from '@/components/navigation/Navigation.component';
+import Sidebar from '@/components/navs/sidebar/Sidebar.component';
+import Navigation from '@/components/navs/navigation/Navigation.component';
 import { ThemeProvider } from '@/components/theme/ThemeProvider.component';
 import { Lato, Playfair_Display, Plus_Jakarta_Sans } from 'next/font/google';
 

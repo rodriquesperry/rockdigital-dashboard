@@ -1,0 +1,40 @@
+.card {
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	width: 735px;
+	height: 320px;
+}
+
+.card_main {
+	display: flex;
+	flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.card_div {
+	font-size: 2.9rem;
+}
+
+.card_div span {
+  font-size: 1rem;
+}
+
+.gauge_container {
+	padding: 0;
+	height: 200px;
+  margin: 0 1rem 0 0;
+}
+
+.gauge {
+	display: flex;
+	flex-direction: column;
+}
+
+.percentage {
+	width: 205px;
+	text-align: center;
+	padding: 0;
+	font-size: 1.5rem;
+	font-weight: bold;
+  line-height: .01rem;
+}
