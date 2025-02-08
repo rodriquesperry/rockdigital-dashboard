@@ -1,5 +1,5 @@
 .main_nav {
-	height: 12.5vh;
+	height: 20.5vh;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -52,5 +52,5 @@
 		rgba(255, 255, 255, 1) 92%
 	);
 	height: 1px;
-	margin: 0 2rem;
+	margin: .2rem 2rem 0;
 }
