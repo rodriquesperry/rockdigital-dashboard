@@ -34,7 +34,7 @@ export default function CustomerRelationsChart() {
 						},
 					]}
 					width={735}
-					height={200}
+					height={260}
 				/>
 			</Card>
 		</>

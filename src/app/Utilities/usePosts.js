@@ -8,22 +8,11 @@ const usePosts = (userUuid, token) => {
 	const [error, setError] = useState(null);
 
 	useEffect(() => {
-		if (!userUuid || !token) {
-			console.log('Skipping posts fetch due to missing userUuid or token.');
-			setLoading(false);
-			return;
-		}
-
 		const fetchPosts = async () => {
 			try {
 				const { data } = await axios.get(
 					`http://127.0.0.1:1337/api/posts?filters[author_uuid][$eq]=${userUuid}`,
-					{
-						headers: { Authorization: `Bearer ${token}` },
-					}
 				);
-
-				console.log('userUuid: ', userUuid);
 
 				if (data?.data) {
 					console.log('Fetched Posts:', data.data);
