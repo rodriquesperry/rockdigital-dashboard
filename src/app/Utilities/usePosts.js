@@ -11,7 +11,7 @@ const usePosts = (userUuid, token) => {
 		const fetchPosts = async () => {
 			try {
 				const { data } = await axios.get(
-					`http://127.0.0.1:1337/api/posts?filters[author_uuid][$eq]=${userUuid}`,
+					`http://127.0.0.1:1337/api/posts`,
 				);
 
 				if (data?.data) {
