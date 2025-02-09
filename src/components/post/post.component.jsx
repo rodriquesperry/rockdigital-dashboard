@@ -12,14 +12,14 @@ const Post = () => {
 		'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzM4NDQ2MjI1LCJleHAiOjE3NDEwMzgyMjV9.tKlE4JBo7K_0knJR2DnIiul0ijPWiUzavKqRIT43NtE';
 
 	const { posts, loading, error } = usePosts(token);
-  const [checkedItems, setCheckedItems] = React.useState({});
+	const [checkedItems, setCheckedItems] = React.useState({});
 
-  const handleChange = (id) => {
-    setCheckedItems((prevCheckedItems) => ({
-      ...prevCheckedItems,
-      [id]: !prevCheckedItems[id],
-    }));
-  };
+	const handleChange = (id) => {
+		setCheckedItems((prevCheckedItems) => ({
+			...prevCheckedItems,
+			[id]: !prevCheckedItems[id],
+		}));
+	};
 
 	if (loading) {
 		return <div>Loading posts...</div>;
@@ -47,11 +47,14 @@ const Post = () => {
 
 					return (
 						<div key={post.id} className={styles.post_information_container}>
-							<Checkbox
-								checked={checkedItems[post.id] || false}
-								onChange={() => handleChange(post.id)}
-								inputProps={{ 'aria-label': 'controlled' }}
-							/>
+							<div className={styles.checkbox_container}>
+								<Checkbox
+									className={styles.checkbox}
+									checked={checkedItems[post.id] || false}
+									onChange={() => handleChange(post.id)}
+									inputProps={{ 'aria-label': 'controlled' }}
+								/>
+							</div>
 							<div className={styles.post_information}>
 								<Image
 									src={`${config.api}${post.featured_image.url}`}
