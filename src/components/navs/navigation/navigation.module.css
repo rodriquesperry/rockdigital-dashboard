@@ -12,8 +12,6 @@
 .nav_links {
 	display: flex;
 	margin: 0 2rem 0 auto;
-	margin-right: 2rem;
-
 	align-items: center;
 }
 
@@ -51,6 +49,6 @@
 		rgba(18, 72, 103, 0.968) 0%,
 		rgba(255, 255, 255, 1) 92%
 	);
-	height: 1px;
 	margin: .2rem 2rem 0;
+  height: 7px;
 }

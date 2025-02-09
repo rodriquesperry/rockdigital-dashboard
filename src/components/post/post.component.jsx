@@ -4,6 +4,7 @@ import Image from 'next/image';
 import usePosts from '../../app/Utilities/usePosts';
 import config from '../../../config';
 import Card from '@mui/material/Card';
+import Checkbox from '@mui/material/Checkbox';
 import styles from './post.module.css';
 
 const Post = () => {
@@ -11,7 +12,14 @@ const Post = () => {
 		'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzM4NDQ2MjI1LCJleHAiOjE3NDEwMzgyMjV9.tKlE4JBo7K_0knJR2DnIiul0ijPWiUzavKqRIT43NtE';
 
 	const { posts, loading, error } = usePosts(token);
-	console.log('posts: ', posts);
+  const [checkedItems, setCheckedItems] = React.useState({});
+
+  const handleChange = (id) => {
+    setCheckedItems((prevCheckedItems) => ({
+      ...prevCheckedItems,
+      [id]: !prevCheckedItems[id],
+    }));
+  };
 
 	if (loading) {
 		return <div>Loading posts...</div>;
@@ -30,23 +38,37 @@ const Post = () => {
 				<p className={styles.tableheader}>Published</p>
 			</div>
 			<ul className={styles.unordered_post_list}>
-				{posts.map((post) => (
-					<div key={post.id} className={styles.post_information_container}>
-						<div className={styles.post_information}>
-							<Image
-								src={`${config.api}${post.featured_image.url}`}
-								alt='Post Image'
-								height={100}
-								width={150}
+				{posts.map((post) => {
+					const isPublished = post.publishedAt != null;
+					const dateString = post.publishedAt;
+					let formattedDate = isPublished
+						? new Date(dateString).toLocaleDateString()
+						: 'Draft';
+
+					return (
+						<div key={post.id} className={styles.post_information_container}>
+							<Checkbox
+								checked={checkedItems[post.id] || false}
+								onChange={() => handleChange(post.id)}
+								inputProps={{ 'aria-label': 'controlled' }}
 							/>
+							<div className={styles.post_information}>
+								<Image
+									src={`${config.api}${post.featured_image.url}`}
+									alt='Post Image'
+									height={100}
+									width={150}
+								/>
+							</div>
+							<div className={styles.post_information}>{post.title}</div>
+							<div className={styles.post_information}>
+								{post.featured ? 'Yes' : 'No'}
+							</div>
+
+							<div className={styles.post_information}>{formattedDate}</div>
 						</div>
-						<div className={styles.post_information}>{post.title}</div>
-						<div className={styles.post_information}>
-							{post.featured ? 'Yes' : 'No'}
-						</div>
-						<div className={styles.post_information}>{post.publishedAt}</div>
-					</div>
-				))}
+					);
+				})}
 			</ul>
 		</>
 	);

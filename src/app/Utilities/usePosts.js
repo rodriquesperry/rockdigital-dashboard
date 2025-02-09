@@ -9,7 +9,9 @@ const usePosts = (userUuid, token) => {
 	useEffect(() => {
 		const fetchPosts = async () => {
 			try {
-				const { data } = await axios.get(`http://127.0.0.1:1337/api/posts?populate=*`);
+				const { data } = await axios.get(
+					`https://rockdigital.agency/api/posts?status=published&populate=*`
+				);
 
 				if (data?.data) {
 					setPosts(data.data);

@@ -6,12 +6,18 @@
 	display: flex;
 	justify-content: space-around;
 	position: sticky;
-  top: 0px;
+  top: 0;
   background-color: #fff;
 }
 
 .tableheader {
   width: 80px;
+  position: sticky;
+  top: 0;
+}
+
+.tableheader:nth-child(1) {
+  margin-left: 1rem;
 }
 
 .post_information_container {
