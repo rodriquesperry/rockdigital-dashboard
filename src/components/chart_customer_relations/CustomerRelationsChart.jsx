@@ -7,7 +7,7 @@ import styles from './customer_relations.module.css';
 export default function CustomerRelationsChart() {
 	return (
 		<>
-			<Card className={styles.card}>
+			<Card className={`${styles.card} card`}>
 				<h4 className='card_title'>Leads and Customers Overview</h4>
 				<BarChart
 					xAxis={[
@@ -34,7 +34,7 @@ export default function CustomerRelationsChart() {
 						},
 					]}
 					width={735}
-					height={260}
+					height={230}
 				/>
 			</Card>
 		</>

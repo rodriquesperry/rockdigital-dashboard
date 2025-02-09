@@ -1,0 +1,32 @@
+.card {
+	display: flex;
+	flex-direction: column;
+	height: 260px;
+	width: 350px;
+}
+
+.total_count_title {
+	width: 150px;
+	height: 50px;
+	margin-left: 1rem;
+}
+
+.content {
+  /* text-align: center; */
+  padding-left: .5rem;
+  padding-top: 0;
+  margin-top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border: 1px solid rgba(15, 155, 55, 0.2);
+  width: 130px;
+  height: 100px;
+  margin-left: .5rem;
+  background: rgba(15, 155, 55, 0.2);
+}
+
+.percentage {
+  font-size: 2.5rem;
+  /* text-align: center; */
+}

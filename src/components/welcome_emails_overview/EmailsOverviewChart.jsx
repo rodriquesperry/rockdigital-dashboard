@@ -38,7 +38,7 @@ function GaugePointer() {
 export default function EmailsOverview() {
 	return (
 		<>
-			<Card className={styles.card}>
+			<Card className={`${styles.card} card`}>
 				<h4 className='card_title'>Welcome Emails Overview</h4>
 				<div className={styles.card_main}>
 					<div className={styles.card_div} id='welcome_email_label'>1,461<span>sent</span></div>

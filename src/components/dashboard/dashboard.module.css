@@ -18,3 +18,14 @@
   gap: 1rem;
   padding-bottom: 5rem;
 }
+
+.second_row {
+  display: flex;
+}
+
+.second_row_small_container {
+  /* display: flex;
+  flex-direction: column;
+  justify-content: space-between; */
+  margin-left: 2rem ;
+}
