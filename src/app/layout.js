@@ -33,7 +33,12 @@ export default function RootLayout({ children }) {
 			<body
 				className={`${latoFont.variable} ${pfDisplay.variable} ${jakartaFont}`}
 			>
-				<ThemeProvider>
+				<ThemeProvider
+					// attribute='class'
+					defaultTheme='light'
+					enableSystem
+					disableTransitionOnChange
+				>
 					<div className='layout'>
 						<Sidebar />
 						<div className='main-container'>

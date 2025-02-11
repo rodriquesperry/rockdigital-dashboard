@@ -1,5 +1,5 @@
 .main_nav {
-	height: 11.5vh;
+	height: 8.5vh;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -7,18 +7,31 @@
 
 .theme_icon {
 	margin-left: 2rem;
+	cursor: pointer;
+}
+
+.darkIcon {
+	color: rgb(0, 68, 255);
+}
+
+.lightIcon {
+	color: rgb(176, 176, 17);
 }
 
 .nav_links {
 	display: flex;
-	margin: 0 2rem 0 auto;
+	margin: 0 8rem 0 auto;
 	align-items: center;
 }
 
+.logout_container {
+	width: 75px;
+}
+
 .logout {
-	display: block;
-	width: 60px;
-	height: 13px;
+	display: flex;
+	width: 80px;
+	height: 30px;
 	background: #4e9caf;
 	padding: 10px;
 	text-align: center;
@@ -26,6 +39,7 @@
 	color: #fff;
 	font-weight: bold;
 	line-height: 13px;
+	align-items: center;
 }
 
 .profile_pic {
@@ -49,6 +63,6 @@
 		rgba(18, 72, 103, 0.968) 0%,
 		rgba(255, 255, 255, 1) 92%
 	);
-	margin: .2rem 2rem 0;
-  height: 2.2px;
+	margin: 0.2rem 6rem 0 0;
+	height: .8px;
 }
