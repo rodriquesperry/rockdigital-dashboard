@@ -37,7 +37,7 @@ a {
 
 .main-container {
   flex-grow: 1;
-  margin-left: 215px; /* Same as sidebar width */
+  margin-left: 240px; /* Same as sidebar width */
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -61,6 +61,7 @@ main {
   margin-bottom: .8rem;
 
 }
+
 
 @layer base {
   :root {

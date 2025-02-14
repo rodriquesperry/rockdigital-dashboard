@@ -2,7 +2,7 @@
 
 import React from 'react';
 import styles from './dashboard.module.css';
-import LeadsChart from '../cards/seven_day_leads_chart/LeadsChart.component';
+import LeadsChart from '../cards/leads_chart/LeadsChart.component';
 
 
 

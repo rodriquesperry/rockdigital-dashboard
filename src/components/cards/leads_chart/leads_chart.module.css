@@ -44,3 +44,18 @@
   justify-content: end;
   width: 100%;
 }
+
+.tooltip {
+  background-color: white; /* Default Light Mode */
+  color: black;
+  border: 1px solid #ddd;
+  padding: 8px;
+  border-radius: 6px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dark {
+  background-color: black;
+  color: white;
+  border: 1px solid #444;
+}
