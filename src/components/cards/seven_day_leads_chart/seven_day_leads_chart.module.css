@@ -1,0 +1,46 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.container p {
+  width: 35%;
+  text-align: center;
+  padding-top: .7rem;
+}
+
+.content_container {
+  display: flex;
+  align-items: center;
+  margin-right: 2rem;
+}
+
+.total_count {
+  text-align: center;
+  width: 50%;
+  font-size: 3rem;
+  font-weight: bold;
+  padding: 0;
+  margin: 0;
+  line-height: 2.2rem;
+}
+
+.total {
+  font-size: 1rem;
+  font-weight: lighter;
+  margin-right: 4rem;
+  display: block;
+}
+
+.chart_container {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}
+
+.chart {
+  height: 200px;
+  display: flex;
+  justify-content: end;
+  width: 100%;
+}

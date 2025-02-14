@@ -6,9 +6,7 @@
 }
 
 .div {
-  border: 1px solid black;
   height: 150px;
-  border-radius: 2%;
 }
 
 .div3 {
@@ -23,6 +21,20 @@
   grid-row-start: 2;
   grid-row-end: 3;
   height: 250px;
+  width: 100%;
+}
+
+.chart_container {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}
+
+.chart {
+  height: 200px;
+  display: flex;
+  justify-content: end;
+  width: 75%;
 }
 
 .div5 {
