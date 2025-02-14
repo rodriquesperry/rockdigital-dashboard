@@ -1,31 +1,54 @@
-.card {
-  height: 100vh;
-  padding: 1rem;
-  flex-wrap: wrap;
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 10px;
+  grid-template-rows: masonry;
 }
 
-.top_kpi {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin-bottom: 1rem;
+.div {
+  border: 1px solid black;
+  height: 150px;
+  border-radius: 2%;
 }
 
-.dashboard_main {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 1rem;
-  padding-bottom: 5rem;
+.div3 {
+  grid-row-start: 1;
+  grid-row-end: 3;
+  height: 408px;
 }
 
-.second_row {
-  display: flex;
+.div4 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  height: 250px;
 }
 
-.second_row_small_container {
-  /* display: flex;
-  flex-direction: column;
-  justify-content: space-between; */
-  margin-left: 2rem ;
+.div5 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 5;
+  height: 250px;
+}
+
+.div6 {
+  grid-row-start: 3;
+  grid-row-end: 5;
+  height: 250px;
+}
+
+.div7 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 5;
+  grid-row-end: 7;
+  height: 250px;
+}
+
+.div8 {
+  grid-row-start: 5;
+  grid-row-end: 7;
+  height: 250px;
 }

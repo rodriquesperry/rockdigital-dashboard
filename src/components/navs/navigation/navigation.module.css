@@ -2,7 +2,6 @@
 	height: 8.5vh;
 	display: flex;
 	align-items: center;
-	justify-content: center;
 }
 
 .theme_icon {
@@ -44,9 +43,7 @@
 
 .profile_pic {
 	display: flex;
-	justify-content: center;
 	align-items: center;
-	margin-top: 0.25rem;
 }
 
 .profile_pic img {
@@ -63,6 +60,6 @@
 		rgba(18, 72, 103, 0.968) 0%,
 		rgba(255, 255, 255, 1) 92%
 	);
-	margin: 0.2rem 6rem 0 0;
+	margin: 0.2rem 2rem 0 0;
 	height: .8px;
 }

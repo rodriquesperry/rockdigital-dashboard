@@ -37,7 +37,7 @@ a {
 
 .main-container {
   flex-grow: 1;
-  margin-left: 250px; /* Same as sidebar width */
+  margin-left: 215px; /* Same as sidebar width */
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -45,7 +45,7 @@ a {
 
 main {
   flex-grow: 1;
-  padding: 0 20px 20px;
+  padding: 20px 20px 20px 0;
   overflow: auto; /* Allows scrolling */
 }
 
