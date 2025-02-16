@@ -61,7 +61,7 @@ const WelcomeEmail = () => {
 						<RadialBarChart
 							data={chartData}
 							endAngle={180}
-							innerRadius={110}
+							innerRadius={90}
 							outerRadius={160}
 						>
 							<ChartTooltip
@@ -117,7 +117,7 @@ const WelcomeEmail = () => {
 						<RadialBarChart
 							data={chartData}
 							endAngle={180}
-							innerRadius={110}
+							innerRadius={90}
 							outerRadius={160}
 						>
 							<ChartTooltip
