@@ -46,7 +46,7 @@ const WelcomeEmail = () => {
   
 
 	return (
-		<Card className={`${styles.container} flex flex-col`}>
+		<Card className={`${styles.container} flex flex-col card`}>
 			<p>Welcome Emails</p>
 			<div className={styles.content_container}>
 				<div className={styles.total_count}>
@@ -63,10 +63,12 @@ const WelcomeEmail = () => {
 							endAngle={180}
 							innerRadius={90}
 							outerRadius={160}
+              className={styles.gauge}
 						>
 							<ChartTooltip
 								cursor={false}
 								content={<ChartTooltipContent hideLabel />}
+                className={theme === 'light' ? styles.tooltip : `${styles.tooltip} ${styles.dark}`}
 							/>
 							<PolarRadiusAxis tick={false} tickLine={false} axisLine={false}>
 								<Label
@@ -86,7 +88,7 @@ const WelcomeEmail = () => {
 														y={(viewBox.cy || 0) + 4}
 														className='fill-muted-foreground'
 													>
-														Visitors
+														Successful Delivered
 													</tspan>
 												</text>
 											);
@@ -119,10 +121,13 @@ const WelcomeEmail = () => {
 							endAngle={180}
 							innerRadius={90}
 							outerRadius={160}
+              className={styles.gauge}
 						>
 							<ChartTooltip
 								cursor={false}
 								content={<ChartTooltipContent hideLabel />}
+                className={theme === 'light' ? styles.tooltip : `${styles.tooltip} ${styles.dark}`}
+
 							/>
 							<PolarRadiusAxis tick={false} tickLine={false} axisLine={false}>
 								<Label
@@ -142,7 +147,7 @@ const WelcomeEmail = () => {
 														y={(viewBox.cy || 0) + 4}
 														className='fill-muted-foreground'
 													>
-														Visitors
+														Click Rate
 													</tspan>
 												</text>
 											);

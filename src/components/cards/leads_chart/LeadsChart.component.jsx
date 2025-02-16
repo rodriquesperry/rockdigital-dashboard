@@ -25,7 +25,7 @@ const LeadsChart = () => {
 	const { theme } = useTheme(); // Example using a ThemeProvider
 
 	return (
-		<Card className={`${styles.container}`}>
+		<Card className={`${styles.container} card`}>
 			<p>Leads Generated (Last 7 Days)</p>
 			<div className={styles.content_container}>
 				<div className={styles.total_count}>

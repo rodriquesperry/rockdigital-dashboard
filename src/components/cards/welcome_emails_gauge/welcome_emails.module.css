@@ -37,15 +37,12 @@
 	display: flex;
 	height: 210px;
   flex-direction: row;
-  
-}
-
-.chart {
 
 }
+
 
 .tooltip {
-	background-color: white; /* Default Light Mode */
+  background-color: white; /* Default Light Mode */
 	color: black;
 	border: 1px solid #ddd;
 	padding: 8px;
@@ -54,7 +51,12 @@
 }
 
 .dark {
-	background-color: black;
+  background-color: black;
 	color: white;
 	border: 1px solid #444;
 }
+
+.gauge {
+  margin-top: 1.5rem;
+}
+
