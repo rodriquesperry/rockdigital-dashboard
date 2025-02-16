@@ -2,20 +2,11 @@
 
 import React from 'react';
 import { useTheme } from 'next-themes';
-import { getLast7DaysData } from '@/Utilities/getLast7DaysData';
-import { Bar, BarChart, CartesianGrid, XAxis } from 'recharts';
-import { TrendingUp } from 'lucide-react';
 import { Label, PolarRadiusAxis, RadialBar, RadialBarChart } from 'recharts';
 import {
 	Card,
-	CardContent,
-	CardDescription,
-	CardFooter,
-	CardHeader,
-	CardTitle,
 } from '@/components/ui/card';
 import {
-	ChartConfig,
 	ChartContainer,
 	ChartTooltip,
 	ChartTooltipContent,
@@ -24,26 +15,24 @@ import {
 import styles from './welcome_emails.module.css';
 
 // const { data: chartData, total } = getLast7DaysData();
-const chartData = [{ month: "january", desktop: 1260, mobile: 570 }]
-
+const chartData = [{ month: 'january', desktop: 1260, mobile: 570 }];
 
 const chartConfig = {
 	desktop: {
 		label: 'Successful Delivered',
 		color: '#2563eb',
 	},
-  mobile: {
-    label: "Mobile",
-    color: "hsl(var(--chart-2))",
-  },
+	mobile: {
+		label: 'Mobile',
+		color: 'hsl(var(--chart-2))',
+	},
 };
 
 const WelcomeEmail = () => {
 	const { theme } = useTheme(); // Example using a ThemeProvider
 	const totalVisitors = chartData[0].desktop + chartData[0].mobile;
 
-  console.log(totalVisitors);
-  
+	console.log(totalVisitors);
 
 	return (
 		<Card className={`${styles.container} flex flex-col card`}>
@@ -53,7 +42,9 @@ const WelcomeEmail = () => {
 					{totalVisitors.toLocaleString()}
 					<span className={styles.total}>Sent</span>
 				</div>
-				<div className={`${styles.chart_container} flex flex-1 items-center pb-0`}>
+				<div
+					className={`${styles.chart_container} flex flex-1 items-center pb-0`}
+				>
 					<ChartContainer
 						config={chartConfig}
 						className='mx-auto aspect-square w-full max-w-[250px]'
@@ -63,12 +54,16 @@ const WelcomeEmail = () => {
 							endAngle={180}
 							innerRadius={90}
 							outerRadius={160}
-              className={styles.gauge}
+							className={styles.gauge}
 						>
 							<ChartTooltip
 								cursor={false}
 								content={<ChartTooltipContent hideLabel />}
-                className={theme === 'light' ? styles.tooltip : `${styles.tooltip} ${styles.dark}`}
+								className={
+									theme === 'light'
+										? styles.tooltip
+										: `${styles.tooltip} ${styles.dark}`
+								}
 							/>
 							<PolarRadiusAxis tick={false} tickLine={false} axisLine={false}>
 								<Label
@@ -79,14 +74,15 @@ const WelcomeEmail = () => {
 													<tspan
 														x={viewBox.cx}
 														y={(viewBox.cy || 0) - 16}
-														className='fill-foreground text-2xl font-bold'
+														className='text-2xl font-bold'
+														fill='currentColor'
 													>
-														{totalVisitors.toLocaleString()}
+														97.8%
 													</tspan>
 													<tspan
 														x={viewBox.cx}
 														y={(viewBox.cy || 0) + 4}
-														className='fill-muted-foreground'
+														fill='currentColor'
 													>
 														Successful Delivered
 													</tspan>
@@ -121,13 +117,16 @@ const WelcomeEmail = () => {
 							endAngle={180}
 							innerRadius={90}
 							outerRadius={160}
-              className={styles.gauge}
+							className={styles.gauge}
 						>
 							<ChartTooltip
 								cursor={false}
 								content={<ChartTooltipContent hideLabel />}
-                className={theme === 'light' ? styles.tooltip : `${styles.tooltip} ${styles.dark}`}
-
+								className={
+									theme === 'light'
+										? styles.tooltip
+										: `${styles.tooltip} ${styles.dark}`
+								}
 							/>
 							<PolarRadiusAxis tick={false} tickLine={false} axisLine={false}>
 								<Label
@@ -138,14 +137,15 @@ const WelcomeEmail = () => {
 													<tspan
 														x={viewBox.cx}
 														y={(viewBox.cy || 0) - 16}
-														className='fill-foreground text-2xl font-bold'
+														className='text-2xl font-bold'
+														fill='currentColor'
 													>
-														{totalVisitors.toLocaleString()}
+														3.3%
 													</tspan>
 													<tspan
 														x={viewBox.cx}
 														y={(viewBox.cy || 0) + 4}
-														className='fill-muted-foreground'
+														fill='currentColor'
 													>
 														Click Rate
 													</tspan>
