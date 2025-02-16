@@ -7,6 +7,7 @@
 
 .div {
   height: 150px;
+  /* border: 1px solid red; */
 }
 
 .div3 {
@@ -43,6 +44,7 @@
   grid-row-start: 3;
   grid-row-end: 5;
   height: 250px;
+  width: 100%;
 }
 
 .div6 {

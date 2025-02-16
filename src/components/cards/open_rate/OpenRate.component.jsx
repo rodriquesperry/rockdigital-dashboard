@@ -10,7 +10,7 @@ import {
 	ChartTooltipContent,
 } from '@/components/ui/chart';
 import { Bar, BarChart, CartesianGrid, XAxis } from 'recharts';
-import styles from './leads_chart.module.css';
+import styles from './open_rate.module.css';
 
 const {data: chartData, total} = getLast7DaysData();
 
@@ -21,17 +21,17 @@ const chartConfig = {
 	},
 };
 
-const LeadsChart = () => {
+const WelcomeEmail = () => {
 	const { theme } = useTheme(); // Example using a ThemeProvider
 
 	return (
-		<Card className={`${styles.container}`}>
-			<p>Leads Generated (Last 7 Days)</p>
+		<Card className={styles.container}>
+			<p>Open Rate</p>
 			<div className={styles.content_container}>
 				<div className={styles.total_count}>
 					{total}<span className={styles.total}>Total</span>
 				</div>
-				<div className={`${styles.chart_container}`}>
+				<div className={styles.chart_container}>
 					<ChartContainer
 						config={chartConfig}
 						className={`${styles.chart} min-h-[210px] w-full`}
@@ -62,4 +62,4 @@ const LeadsChart = () => {
 	);
 };
 
-export default LeadsChart;
+export default WelcomeEmail;

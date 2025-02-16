@@ -47,6 +47,7 @@ main {
   flex-grow: 1;
   padding: 20px 20px 20px 0;
   overflow: auto; /* Allows scrolling */
+  margin-bottom: 1rem;
 }
 
 .card_title {
