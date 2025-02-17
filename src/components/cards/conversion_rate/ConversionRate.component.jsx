@@ -29,11 +29,11 @@ const ConversionRate = () => {
 
 	return (
 		<Card className={`${styles.container} flex flex-col card`}>
-			<p className={styles.title}>Conversion Rate (Last 7 Days)</p>
+			<p className={styles.title}>Conversion Rate</p>
 			<div className={styles.conversion_outline}>
 				5.6<span className={styles.percentage_sign}>%</span>
 			</div>
-			<p className={styles.month_header}>{month}</p>
+			<p className={styles.month_header}>{month} (Last 7 Days)</p>
 			<div className={styles.chart_container}>
 				<ChartContainer config={chartConfig} className='w-full h-[200px]'>
 					<LineChart
