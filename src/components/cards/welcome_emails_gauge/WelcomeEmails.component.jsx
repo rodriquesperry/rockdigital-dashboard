@@ -45,7 +45,7 @@ const WelcomeEmail = () => {
 				>
 					<ChartContainer
 						config={chartConfig}
-						className='mx-auto aspect-square w-full max-w-[250px]'
+						className={`${styles.chart} mx-auto aspect-square w-full max-w-[250px]`}
 					>
 						<RadialBarChart
 							data={chartData}

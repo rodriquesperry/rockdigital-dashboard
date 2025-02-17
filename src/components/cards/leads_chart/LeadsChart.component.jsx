@@ -12,7 +12,7 @@ import {
 import { Bar, BarChart, CartesianGrid, XAxis } from 'recharts';
 import styles from './leads_chart.module.css';
 
-const {data: chartData, total} = getLast7DaysData();
+const { data: chartData, total } = getLast7DaysData();
 
 const chartConfig = {
 	desktop: {
@@ -29,12 +29,13 @@ const LeadsChart = () => {
 			<p>Leads Generated (Last 7 Days)</p>
 			<div className={styles.content_container}>
 				<div className={styles.total_count}>
-					{total}<span className={styles.total}>Total</span>
+					{total}
+					<span className={styles.total}>Total</span>
 				</div>
 				<div className={`${styles.chart_container}`}>
 					<ChartContainer
 						config={chartConfig}
-						className={`${styles.chart} min-h-[210px] w-full`}
+						className={`${styles.chart} min-h-[250px] w-full`}
 					>
 						<BarChart accessibilityLayer data={chartData}>
 							<CartesianGrid vertical={false} />
