@@ -3,9 +3,7 @@
 import React from 'react';
 import { useTheme } from 'next-themes';
 import { Label, PolarRadiusAxis, RadialBar, RadialBarChart } from 'recharts';
-import {
-	Card,
-} from '@/components/ui/card';
+import { Card } from '@/components/ui/card';
 import {
 	ChartContainer,
 	ChartTooltip,
@@ -77,8 +75,9 @@ const WelcomeEmail = () => {
 														className='text-2xl font-bold'
 														fill='currentColor'
 													>
-														97.8%
+														97.8
 													</tspan>
+                          <tspan fill='currentColor'>%</tspan>
 													<tspan
 														x={viewBox.cx}
 														y={(viewBox.cy || 0) + 4}
@@ -140,8 +139,9 @@ const WelcomeEmail = () => {
 														className='text-2xl font-bold'
 														fill='currentColor'
 													>
-														3.3%
+														3.3
 													</tspan>
+                          <tspan fill='currentColor'>%</tspan>
 													<tspan
 														x={viewBox.cx}
 														y={(viewBox.cy || 0) + 4}
