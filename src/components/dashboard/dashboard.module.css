@@ -1,17 +1,14 @@
 .container {
 	display: grid;
-	/* grid-template-columns: repeat(auto-fill, minmax(1fr, 300px)); */
-	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
 	gap: 20px;
 	grid-template-rows: masonry;
 }
 
-.div1, .div2 { 
-  border: 1px solid red;
-  height: 100px;
+.div1,
+.div2 {
+	height: 100px;
 }
-
-
 
 .div3 {
 	grid-row-start: 1;
@@ -28,44 +25,42 @@
 	width: 100%;
 }
 
-.chart_container {
-	width: 100%;
-	display: flex;
-	justify-content: end;
-}
-
-.chart {
-	height: 200px;
-	display: flex;
-	justify-content: end;
-	width: 75%;
-}
-
 .div5 {
 	grid-column-start: 1;
 	grid-column-end: 3;
 	grid-row-start: 3;
-	grid-row-end: 5;
-	height: 300px;
+	grid-row-end: 3;
+	height: 220px;
 	width: 100%;
 }
 
 .div6 {
 	grid-row-start: 3;
-	grid-row-end: 5;
-	height: 300px;
+	grid-row-end: 3;
+	height: 220px;
 }
 
 .div7 {
 	grid-column-start: 1;
 	grid-column-end: 3;
-	grid-row-start: 5;
-	grid-row-end: 7;
+	grid-row-start: 4;
+	grid-row-end: 6;
 	height: 300px;
 }
 
 .div8 {
-	grid-row-start: 5;
-	grid-row-end: 7;
+	grid-row-start: 4;
+	grid-row-end: 6;
 	height: 300px;
+}
+
+@media screen and (min-width: 2560px) {
+	.container {
+		display: grid;
+		gap: 20px;
+		grid-template-rows: masonry;
+    justify-self: center;
+	}
+
+  
 }

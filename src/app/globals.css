@@ -56,14 +56,14 @@ main {
 .card_title {
 	padding: 0.5rem 1rem 0;
 	width: 100%;
-	font-weight: 200;
+	font-weight: 900;
 	margin-bottom: 0;
 }
 
 .card {
 	border: 1px solid rgba(0, 0, 0, 0.2);
 	margin-bottom: 0.8rem;
-	box-shadow: 0 10px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important;
+	box-shadow: 0 10px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 12px 0 rgba(0, 0, 0, 0.19) !important;
 }
 
 @layer base {

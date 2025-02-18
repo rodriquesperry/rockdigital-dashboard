@@ -68,7 +68,7 @@ const OpenRate = () => {
 
 	return (
 		<Card className={`${styles.container} card`}>
-			<p>Open Rate</p>
+			<p className="card_title">Open Rate</p>
 			<div
 				className={`${styles.chart_container} flex flex-1 items-center pb-0`}
 			>

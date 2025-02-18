@@ -29,7 +29,7 @@ const ConversionRate = () => {
 
 	return (
 		<Card className={`${styles.container} flex flex-col card`}>
-			<p className={styles.title}>Conversion Rate</p>
+			<p className="card_title">Conversion Rate</p>
 			<div className={styles.conversion_outline}>
 				5.6<span className={styles.percentage_sign}>%</span>
 			</div>

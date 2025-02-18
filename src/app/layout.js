@@ -34,7 +34,6 @@ export default function RootLayout({ children }) {
 				className={`${latoFont.variable} ${pfDisplay.variable} ${jakartaFont}`}
 			>
 				<ThemeProvider
-					// attribute='class'
 					defaultTheme='light'
 					enableSystem
 					disableTransitionOnChange

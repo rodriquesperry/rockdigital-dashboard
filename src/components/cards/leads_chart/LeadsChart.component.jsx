@@ -1,3 +1,5 @@
+"use client"
+
 import React from 'react';
 import { useTheme } from 'next-themes';
 import { Card } from '@/components/ui/card';
@@ -26,7 +28,7 @@ const LeadsChart = () => {
 
 	return (
 		<Card className={`${styles.container} card`}>
-			<p>Leads Generated (Last 7 Days)</p>
+			<p className="card_title">Leads Generated (Last 7 Days)</p>
 			<div className={styles.content_container}>
 				<div className={styles.total_count}>
 					{total}
