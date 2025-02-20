@@ -19,6 +19,7 @@ const pfDisplay = Playfair_Display({
 
 const jakartaFont = Plus_Jakarta_Sans({
 	variable: '--font-plus-jakarta-sans',
+	weight: ['400', '500', '600', '700'],
 	subsets: ['latin'],
 });
 
@@ -34,7 +35,8 @@ export default function RootLayout({ children }) {
 				className={`${latoFont.variable} ${pfDisplay.variable} ${jakartaFont}`}
 			>
 				<ThemeProvider
-					defaultTheme='light'
+					attribute='class'
+					defaultTheme='system'
 					enableSystem
 					disableTransitionOnChange
 				>

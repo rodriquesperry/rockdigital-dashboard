@@ -12,10 +12,6 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 }
 
-[data-theme='dark'] .card {
-	background-color: #191919;
-}
-
 * {
 	box-sizing: border-box;
 	padding: 0;
@@ -27,11 +23,11 @@ a {
 	text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
 	html {
 		color-scheme: dark;
 	}
-}
+} */
 
 .layout {
 	display: flex;
@@ -44,7 +40,7 @@ a {
 	display: flex;
 	flex-direction: column;
 	height: 100vh;
-  width: 100%;
+	width: 100%;
 }
 
 main {
@@ -52,7 +48,7 @@ main {
 	padding: 20px 0px 0 0;
 	overflow: auto; /* Allows scrolling */
 	margin: 0 0 1rem 0;
-  justify-content: center;
+	justify-content: center;
 }
 
 .card_title {
@@ -63,14 +59,22 @@ main {
 }
 
 .card {
-	border: 1px solid rgba(0, 0, 0, 0.2);
+	border: 1px solid #c3bcbc50;
 	margin-bottom: 0.8rem;
 	box-shadow: 0 10px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 12px 0 rgba(0, 0, 0, 0.19) !important;
 }
 
+[data-theme="dark"] {
+
+  --border-color: red;
+
+  --border-opacity: 0.2;
+
+}
+
 @layer base {
 	:root {
-		--background: 0 0% 100%;
+		--background: 240 10% 100%;
 		--foreground: 240 10% 3.9%;
 		--card: 0 0% 100%;
 		--card-foreground: 240 10% 3.9%;

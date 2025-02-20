@@ -1,6 +1,6 @@
 "use client"
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useTheme } from 'next-themes';
 import { Card } from '@/components/ui/card';
 import { getLast7DaysData } from '@/Utilities/getLast7DaysData';
@@ -14,8 +14,6 @@ import {
 import { Bar, BarChart, CartesianGrid, XAxis } from 'recharts';
 import styles from './leads_chart.module.css';
 
-const { data: chartData, total } = getLast7DaysData();
-
 const chartConfig = {
 	desktop: {
 		label: 'Desktop',
@@ -25,6 +23,17 @@ const chartConfig = {
 
 const LeadsChart = () => {
 	const { theme } = useTheme(); // Example using a ThemeProvider
+  const [chartData, setChartData] = useState([]);
+  const [total, setTotal] = useState('...');
+
+  useEffect(() => {
+      const getData = async () => {
+        const { data, total } = await getLast7DaysData();
+        setChartData(data || []);
+        setTotal(total || '...Loading');
+      }
+      getData();
+    }, [])
 
 	return (
 		<Card className={`${styles.container} card`}>

@@ -1,7 +1,8 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import profile_pic from '@/assets/profile_pic.avif';
 import { useTheme } from 'next-themes';
 import { MdOutlineLightMode } from 'react-icons/md';
@@ -11,33 +12,39 @@ import styles from './navigation.module.css';
 
 const Navigation = () => {
 	const [isLoggedIn, setIsLoggedIn] = useState(true);
-	const { setTheme, theme } = useTheme();
+	const { setTheme, resolvedTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, [])
+
 	return (
 		<>
 			<nav className={styles.main_nav}>
 				<div className={styles.theme_icon}>
-					<a
-						onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+					<div
+						onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}
 						type='button'
 						className={styles.theme_button}
 					>
-						{theme === 'dark' ? (
+						{!mounted ? null : resolvedTheme === 'dark' ? (
 							<MdOutlineDarkMode className={styles.darkIcon} size={28} />
 						) : (
 							<MdOutlineLightMode className={styles.lightIcon} size={28} />
 						)}
-					</a>
+					</div>
 				</div>
 				<div className={styles.nav_links}>
 					<div className={`${styles.logout_container}`}>
-						<a href='/' className={`${styles.logout}`}>
+						<Link href='/' className={`${styles.logout}`}>
 							Log out
-						</a>
+						</Link>
 					</div>
 					<div className={styles.profile_pic}>
-						<a href='/profile'>
+						<Link href='/profile'>
 							<Image src={profile_pic} alt='Profile picture' />
-						</a>
+						</Link>
 					</div>
 				</div>
 			</nav>

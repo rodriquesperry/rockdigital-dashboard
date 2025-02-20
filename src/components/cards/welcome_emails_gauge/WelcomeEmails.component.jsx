@@ -7,7 +7,6 @@ import {
 	PolarRadiusAxis,
 	RadialBar,
 	RadialBarChart,
-	ResponsiveContainer,
 } from 'recharts';
 import { Card, CardContent } from '@/components/ui/card';
 import {
@@ -18,7 +17,6 @@ import {
 
 import styles from './welcome_emails.module.css';
 
-// const { data: chartData, total } = getLast7DaysData();
 const chartData = [{ month: 'january', desktop: 1260, mobile: 570 }];
 
 const chartConfig = {
@@ -35,8 +33,6 @@ const chartConfig = {
 const WelcomeEmail = () => {
 	const { theme } = useTheme(); // Example using a ThemeProvider
 	const totalVisitors = chartData[0].desktop + chartData[0].mobile;
-
-	console.log(totalVisitors);
 
 	return (
 		<Card className={`${styles.container} flex flex-col card`}>

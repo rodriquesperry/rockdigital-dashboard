@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect, useState} from 'react';
 import { useTheme } from 'next-themes';
 import { getLast7DaysData } from '@/Utilities/getLast7DaysData';
 import { Card } from '@/components/ui/card';
@@ -13,7 +13,6 @@ import {
 } from '@/components/ui/chart';
 import styles from './conversion_rate.module.css';
 
-const { data: chartData } = getLast7DaysData();
 
 const chartConfig = {
 	desktop: {
@@ -26,6 +25,15 @@ const ConversionRate = () => {
 	const theme = useTheme();
 	const date = new Date();
 	let month = date.toLocaleDateString('default', { month: 'long' });
+  const [chartData, setChartData] = useState([]);
+
+  useEffect(() => {
+    const getData = async () => {
+      const { data } = await getLast7DaysData();
+      setChartData(data || []);
+    }
+    getData();
+  }, [])
 
 	return (
 		<Card className={`${styles.container} flex flex-col card`}>
