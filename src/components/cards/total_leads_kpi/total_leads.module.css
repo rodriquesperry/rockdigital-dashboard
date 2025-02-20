@@ -1,4 +1,21 @@
 .container {
 	width: 100%;
   height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.title {
+  width: 33%;
+}
+
+.total_leads_container {
+  display: flex;
+  justify-content: center;
+}
+
+.total_leads_num {
+  font-size: 3rem;
+  font-weight: bold;
+  margin: auto;
 }
