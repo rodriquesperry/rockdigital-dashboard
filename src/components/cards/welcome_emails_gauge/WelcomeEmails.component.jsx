@@ -54,14 +54,11 @@ const WelcomeEmail = () => {
 							config={chartConfig}
 							className={`${styles.chart} mx-auto aspect-square w-full max-w-[250px]`}
 						>
-							<ResponsiveContainer width='100%' height='100%'>
 								<RadialBarChart
 									data={chartData}
 									endAngle={180}
 									innerRadius={90}
 									outerRadius={140}
-									width={500}
-									height={300}
 									className={styles.gauge}
 								>
 									<ChartTooltip
@@ -124,13 +121,12 @@ const WelcomeEmail = () => {
 										className='stroke-transparent stroke-2'
 									/>
 								</RadialBarChart>
-							</ResponsiveContainer>
+							
 						</ChartContainer>
 						<ChartContainer
 							config={chartConfig}
 							className={`${styles.chart} mx-auto aspect-square w-full max-w-[250px]`}
 						>
-							<ResponsiveContainer width='100%' height='100%'>
 								<RadialBarChart
 									data={chartData}
 									endAngle={180}
@@ -198,7 +194,6 @@ const WelcomeEmail = () => {
 										className='stroke-transparent stroke-2'
 									/>
 								</RadialBarChart>
-							</ResponsiveContainer>
 						</ChartContainer>
 					</div>
 				</CardContent>

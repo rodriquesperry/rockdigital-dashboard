@@ -18,7 +18,7 @@
 	font-size: 3rem;
 	font-weight: bold;
 	padding: 0;
-	margin: 3.5rem 0 2rem;
+	margin: 1.5rem 0 2rem;
 	line-height: 2.2rem;
 }
 
@@ -35,7 +35,7 @@
 	height: 100%;
 	flex-direction: row;
 	align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .chart {
@@ -43,6 +43,7 @@
 	display: flex;
 	justify-content: end;
 	width: 100%;
+  margin: 0 3rem;
 }
 
 .tooltip {
