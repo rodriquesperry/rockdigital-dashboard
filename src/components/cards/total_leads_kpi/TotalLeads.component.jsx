@@ -14,7 +14,7 @@ const TotalLeads = () => {
 			<div className={styles.total_leads_container}>
 				<p className={styles.total_leads_num}>1,298</p>
 				<span>
-					{percentage > 0 ? <LuCircleArrowUp size={30} className={styles.green} /> : <LuCircleArrowDown size={30} className={styles.red}/>
+					{percentage > 0 ? <LuCircleArrowUp className={styles.green} /> : <LuCircleArrowDown className={styles.red}/>
         } &nbsp;4.7% from mth
 				</span>
 			</div>

@@ -14,7 +14,7 @@ const TotalCustomers = () => {
 			<div className={styles.total_customers_container}>
 				<p className={styles.total_customers_num}>898</p>
 				<span>
-					{percentage > 0 ? <LuCircleArrowUp size={30} className={styles.green} /> : <LuCircleArrowDown size={30} className={styles.red}/>
+					{percentage > 0 ? <LuCircleArrowUp className={styles.green} /> : <LuCircleArrowDown className={styles.red}/>
         } &nbsp;4.7% from mth
 				</span>
 			</div>
