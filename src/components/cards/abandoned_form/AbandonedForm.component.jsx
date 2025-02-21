@@ -27,13 +27,10 @@ const chartData = [
 	{ month: 'May', desktop: 209, mobile: 130 },
 	{ month: 'June', desktop: 214, mobile: 140 },
 ];
+
 const chartConfig = {
 	desktop: {
 		label: 'Desktop',
-		color: 'hsl(var(--chart-1))',
-	},
-	mobile: {
-		label: 'Mobile',
 		color: 'hsl(var(--chart-2))',
 	},
 	label: {
@@ -69,7 +66,7 @@ const AbandonedForm = () => {
 								dataKey='month'
 								type='category'
 								tickLine={false}
-								tickMargin={10}
+								tickMargin={5}
 								axisLine={false}
 								tickFormatter={(value) => value.slice(0, 3)}
 								hide
