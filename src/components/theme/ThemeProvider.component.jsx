@@ -1,16 +1,19 @@
-"use client";
+'use client';
 
-import React, { useEffect } from "react";
-import { ThemeProvider as NextThemesProvider } from "next-themes";
-
-
+import React, { useEffect, useState } from 'react';
+import { ThemeProvider as NextThemesProvider } from 'next-themes';
 
 export function ThemeProvider(props) {
-  const { children, ...rest } = props;
+	const { children, ...rest } = props;
+	const [mounted, setMounted] = useState(false);
 
-  useEffect(() => {
-    document.documentElement.setAttribute("data-theme", "light");
-  }, []);
+	useEffect(() => {
+		setMounted(true);
+		document.documentElement.setAttribute('data-theme', 'light');
+	}, []);
 
-  return <NextThemesProvider {...rest}>{children}</NextThemesProvider>;
+	if (!mounted) {
+		return <>{children}</>;
+	}
+	return <NextThemesProvider {...rest}>{children}</NextThemesProvider>;
 }

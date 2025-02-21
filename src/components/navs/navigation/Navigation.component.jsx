@@ -15,9 +15,7 @@ const Navigation = () => {
 	const { setTheme, resolvedTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
-  useEffect(() => {
-    setMounted(true);
-  }, [])
+  
 
 	return (
 		<>
@@ -28,7 +26,7 @@ const Navigation = () => {
 						type='button'
 						className={styles.theme_button}
 					>
-						{!mounted ? null : resolvedTheme === 'dark' ? (
+						{resolvedTheme === 'dark' ? (
 							<MdOutlineDarkMode className={styles.darkIcon} size={28} />
 						) : (
 							<MdOutlineLightMode className={styles.lightIcon} size={28} />
