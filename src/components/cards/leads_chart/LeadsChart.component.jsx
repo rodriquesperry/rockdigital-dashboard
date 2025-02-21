@@ -24,7 +24,7 @@ const chartConfig = {
 const LeadsChart = () => {
 	const { theme } = useTheme(); // Example using a ThemeProvider
   const [chartData, setChartData] = useState([]);
-  const [total, setTotal] = useState('...');
+  const [total, setTotal] = useState('...loading');
 
   useEffect(() => {
       const getData = async () => {
