@@ -35,7 +35,7 @@ const Navigation = () => {
 				</div>
 				<div className={styles.nav_links}>
 					<div className={`${styles.logout_container}`}>
-						<Link href='/' className={`${styles.logout}`}>
+						<Link href='/' className={`bg-background ${styles.logout}`}>
 							Log out
 						</Link>
 					</div>

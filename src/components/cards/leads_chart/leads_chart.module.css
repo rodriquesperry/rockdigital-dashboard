@@ -57,9 +57,14 @@
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1439px) {
-	.total_count {
-		font-size: 2rem;
+
+  .container {
     width: 100%;
+  }
+
+	.total_count {
+		font-size: 3rem;
+    width: 30%;
 	}
 
   .total_count span {
@@ -74,7 +79,7 @@
   }
 
 	.chart {
-		width: 85%;
+		width: 100%;
 		justify-content: flex-start;
 	}
 }
